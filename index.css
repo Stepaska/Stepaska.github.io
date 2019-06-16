@@ -7,7 +7,8 @@
     right: 0;
     width: 100%;
     font-size: 50px;
-    border-bottom: 4px solid rgb(247, 0, 255)
+    border-bottom: 4px solid rgb(247, 0, 255);
+    z-index: 1001;
 }
 
 .menu-right {
@@ -72,8 +73,8 @@ body {
     padding: 15px;
     margin: auto;
     border-radius: 20px;
-    box-shadow: #000
-
+    box-shadow: #000;
+    text-align: center;
 
 }
 .card-button:hover {
@@ -123,4 +124,42 @@ height:50px ;
 .content img{
     height: 400px
 }
+.item-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-close {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    cursor: pointer;
+}
+.item-content {
+    width: 60%;
+    min-width: 500px;
+    height: 400px;
+    background: white;
+    padding: 15px;
+    position: relative;
+}
 
+.item-info {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.item-img {
+    height: 300px;;
+}
+
+.item-text p {
+}
