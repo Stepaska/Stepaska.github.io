@@ -5,15 +5,16 @@
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
     font-size: 50px;
     border-bottom: 4px solid rgb(247, 0, 255);
     z-index: 1001;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu-right {
-    position: absolute;
-    right: 30px;
+    /* position: absolute;
+    right: 30px; */
 }
 .menu-right a {
     color: rgb(255, 255, 255);
@@ -90,6 +91,7 @@ padding: 15px;
 }
 .humster-cards{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .form-text{
@@ -134,6 +136,7 @@ height:50px ;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 .item-close {
     width: 30px;
@@ -162,4 +165,29 @@ height:50px ;
 }
 
 .item-text p {
+} 
+.menu-right img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-right a {
+        /* display:none; */
+        font-size: 20px
+    }
+    .content {
+        flex-direction: column;
+        height: auto;
+    }
+    .mobile-menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 153, 0,0.6);
+        display: none;
+
+    }
 }
