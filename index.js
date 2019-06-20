@@ -1,21 +1,16 @@
 function humburgerKlick() {
-    var mobileMenu = document.getElementsByClassName("mobile-menu")[0];
-   var display = mobileMenu.style.display;
-   if (display == "") {
-    mobileMenu.style.display = "flex"
-   }else{
-    mobileMenu.style.display = "";
-   }
-
+    $(".mobile-menu").slideToggle(500);
 }
 
-function moreKlick() {
-    var mobileMenu = document.getElementsByClassName("item-window")[0];
+function moreKlick(event, num) {
+    num = num || "";
+    var mobileMenu = document.querySelector(".item-window" + num);
    var display = mobileMenu.style.display;
-   if (display == "") {
-    mobileMenu.style.display = "flex"
+   if (display == "" || display == "none") {
+    $(".item-window"+num).fadeIn(500);
+        mobileMenu.style.display = "flex";
    }else{
-    mobileMenu.style.display = "";
+    $(".item-window").fadeOut(500);
    }
 
 }
@@ -23,9 +18,17 @@ function moreKlick() {
 var humburgerIcon = document.getElementsByClassName("menu-icon") [0];
 humburgerIcon.addEventListener("click", humburgerKlick ) ;
 
-
-var moreIcon = document.getElementsByClassName("card-button") [1];
-moreIcon.addEventListener("click", moreKlick ) ;
-
 var a = document.getElementsByClassName("item-close")[0];
 a.addEventListener("click", moreKlick ) ;
+
+$(".card-button.one").click(
+    function (event) {
+        moreKlick(event, ".one")
+    }
+)
+
+$(".card-button.two").click(
+    function (event) {
+        moreKlick(event, ".one")
+    }
+)

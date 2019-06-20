@@ -171,10 +171,19 @@ height:50px ;
     vertical-align: middle;
 }
 
+.menu-icon {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
+    .menu-icon {
+        display: inline;
+    }
+    
     .menu-right a {
         /* display:none; */
-        font-size: 20px
+        font-size: 20px;
+        display: block;
     }
     .content {
         flex-direction: column;
