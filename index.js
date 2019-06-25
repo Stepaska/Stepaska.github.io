@@ -18,9 +18,6 @@ function moreKlick(event, num) {
 var humburgerIcon = document.getElementsByClassName("menu-icon") [0];
 humburgerIcon.addEventListener("click", humburgerKlick ) ;
 
-var a = document.getElementsByClassName("item-close")[0];
-a.addEventListener("click", moreKlick ) ;
-
 $(".card-button.one").click(
     function (event) {
         moreKlick(event, ".one")
@@ -29,6 +26,12 @@ $(".card-button.one").click(
 
 $(".card-button.two").click(
     function (event) {
-        moreKlick(event, ".one")
+        moreKlick(event, ".two")
+    }
+)
+
+$(".item-close").click(
+    function (event) {
+        $(".item-window").fadeOut()
     }
 )
